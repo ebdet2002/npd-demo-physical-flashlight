@@ -1,0 +1,13 @@
+part_no,description,qty,material,unit_cost_usd,notes
+FL-BODY-01,Body tube (machined/extruded aluminum),1,6061-T6 aluminum,2.10,"75mm x 25mm OD x 1.5mm wall, anodized"
+FL-HEAD-01,Head housing w/ bezel threads,1,6061-T6 aluminum,1.35,"30mm length, 32mm OD, lens pocket machined"
+FL-TAIL-01,Tail cap w/ USB-C charge port cutout,1,6061-T6 aluminum,0.65,"25mm length x 25mm OD"
+FL-LENS-01,TIR optic lens (off-the-shelf),1,Polycarbonate,0.45,"~20mm diameter, off-the-shelf per v1 scope cut-line"
+FL-BEZEL-01,Bezel retaining ring,1,6061-T6 aluminum,0.30,Threaded, retains lens
+FL-ORING-01,O-ring - head/body joint,1,Silicone (NBR alt.),0.04,"ID ~29mm, 1.5mm cross-section"
+FL-ORING-02,O-ring - body/tail joint,1,Silicone (NBR alt.),0.04,"ID ~22mm, 1.5mm cross-section"
+FL-CELL-01,18650 Li-ion cell (3000mAh),1,Li-ion,2.60,Protected cell, button top
+FL-CLIP-01,Pocket clip,1,Stainless spring steel,0.25,Reversible mount
+FL-SCR-01,M2x4 self-tapping screw,4,Stainless steel,0.02,"Head/bezel + tail retention, $0.02 ea"
+FL-SW-01,Tactile long-press fallback switch,1,SPST momentary,0.18,Tail cap, hardware OFF fallback
+FL-PKG-01,Retail packaging (box + foam insert),1,Cardboard/EVA foam,0.55,Per-unit at 5000-unit volume
