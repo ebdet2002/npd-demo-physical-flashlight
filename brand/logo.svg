@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beacon smart flashlight logo">
+  <defs>
+    <linearGradient id="beam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="200" height="200" fill="#0B0C0E"/>
+
+  <!-- beam cone, widening to the right -->
+  <path d="M 70 100 L 190 40 L 190 160 Z" fill="url(#beam)"/>
+
+  <!-- flashlight head (front-on view): bezel ring -->
+  <circle cx="60" cy="100" r="34" fill="#1C1F26" stroke="#F4F1EC" stroke-width="3"/>
+  <!-- lens -->
+  <circle cx="60" cy="100" r="22" fill="#FF6B00"/>
+  <circle cx="60" cy="100" r="22" fill="none" stroke="#0B0C0E" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- adaptive-sensor accent ring (ambient light sensor cue) -->
+  <circle cx="60" cy="100" r="42" fill="none" stroke="#4FD1FF" stroke-width="2" stroke-dasharray="4 6" opacity="0.8"/>
+
+  <!-- tap indicator: two concentric arcs top-left suggesting a tap/pulse -->
+  <path d="M 24 56 A 10 10 0 0 1 36 52" fill="none" stroke="#4FD1FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 16 64 A 20 20 0 0 1 40 54" fill="none" stroke="#4FD1FF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>

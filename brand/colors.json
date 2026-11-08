@@ -1,0 +1,27 @@
+{
+  "primary": {
+    "hex": "#FF6B00",
+    "name": "Beacon Orange",
+    "usage": "High-visibility safety orange — logo mark, CTA accents, strobe/alert states in any UI."
+  },
+  "secondary": {
+    "hex": "#1C1F26",
+    "name": "Tool Charcoal",
+    "usage": "Body/housing color reference and primary dark UI background — matches anodized aluminum housing."
+  },
+  "accent": {
+    "hex": "#4FD1FF",
+    "name": "Beam Cyan",
+    "usage": "Represents the adaptive-light-sensor behavior; used for active/auto-brightness indicators and viewer UI highlights."
+  },
+  "neutral_dark": {
+    "hex": "#0B0C0E",
+    "name": "Night Black",
+    "usage": "Deepest background, PCB silkscreen reference, viewer canvas background."
+  },
+  "neutral_light": {
+    "hex": "#F4F1EC",
+    "name": "Warehouse White",
+    "usage": "Light backgrounds, body text on dark surfaces, documentation pages."
+  }
+}
