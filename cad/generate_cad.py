@@ -42,15 +42,29 @@ BODY_DIAMETER = 25.0      # mm, battery tube OD
 HEAD_DIAMETER = 32.0      # mm, head OD (steps up for lens/bezel)
 TAIL_DIAMETER = 25.0      # mm, tail cap OD (flush with body)
 
-WALL_THICKNESS = 1.5      # mm -- named so it's trivially adjustable; this
-                           # is exactly the parameter touched in the v1.1
-                           # iteration pass (see docs/CHANGELOG.md).
+WALL_THICKNESS = 1.5      # mm -- named so it's trivially adjustable.
+                           # v1.1 FIX: this parameter used to be dead --
+                           # the bore below was sized purely from the cell
+                           # clearance, independent of WALL_THICKNESS, so
+                           # the *actual* resulting wall was 2.6mm even
+                           # though this constant (matching docs/SPEC.md)
+                           # said 1.5mm. See docs/CHANGELOG.md.
 
 # 18650 cell: 18.6mm diameter nominal, 65.2mm length -- needs clearance bore
 CELL_DIAMETER = 18.6
 CELL_CLEARANCE = 0.6      # mm radial clearance around the cell for the PCB
                            # sleeve + fitting tolerance
-BORE_DIAMETER = CELL_DIAMETER + 2 * CELL_CLEARANCE  # 19.8 mm
+MIN_BORE_DIAMETER = CELL_DIAMETER + 2 * CELL_CLEARANCE  # 19.8 mm -- floor
+
+# Bore is now driven by the documented wall thickness, not by cell
+# clearance alone -- cell clearance is only used as a minimum-viable floor
+# so a future WALL_THICKNESS edit can't accidentally shrink the bore below
+# what the cell physically needs.
+BORE_DIAMETER = BODY_DIAMETER - 2 * WALL_THICKNESS
+assert BORE_DIAMETER >= MIN_BORE_DIAMETER, (
+    f"WALL_THICKNESS={WALL_THICKNESS}mm leaves only a {BORE_DIAMETER}mm bore, "
+    f"but the 18650 cell + clearance needs at least {MIN_BORE_DIAMETER}mm."
+)
 
 # O-ring grooves at head/body and body/tail joints
 ORING_CROSS_SECTION = 1.5   # mm
@@ -199,6 +213,9 @@ def main():
     )
     print(f"Target length from SPEC.md: {TOTAL_LENGTH:.2f} mm")
     print(f"Target max diameter from SPEC.md: {HEAD_DIAMETER:.2f} mm")
+    actual_wall = (BODY_DIAMETER - BORE_DIAMETER) / 2
+    print(f"Body wall thickness: documented={WALL_THICKNESS:.2f}mm, "
+          f"actual={actual_wall:.2f}mm")
 
 
 if __name__ == "__main__":
