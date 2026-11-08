@@ -1,0 +1,11 @@
+ref,qty,description,mpn,manufacturer,package,unit_cost_usd,notes
+U1,1,ESP32-WROOM-32 module,ESP32-WROOM-32E,Espressif,SMD module (18x25.5mm castellated),3.10,Main MCU; Wi-Fi/BT unused in v1 firmware
+U2,1,Ambient light sensor (I2C),BH1750FVI,Rohm,"SMD, 5-pad (simplified footprint)",0.35,Address pin tied low -> 0x23
+U3,1,3-axis accelerometer (I2C, HW click engine),LIS3DH,STMicroelectronics,"LGA-14 (simplified 5-pad footprint)",0.55,Hardware single/double-click detection via CLICK_SRC register
+Q1,1,N-channel MOSFET (logic level),AO3400A,Alpha & Omega Semi,SOT-23,0.08,LED driver gate, PWM switched from U1 GPIO25
+R1,1,Current-sense resistor 0.1R 1% 1/2W,ERJ-6RQF0.1R,Panasonic,0805,0.04,Open-loop in v1; placed for v2 closed-loop current limit
+J1,1,2-pin JST-PH connector (LED),B2B-PH-K-S,JST,2-pin PH (2.0mm pitch),0.12,Connects to off-board LED star
+J2,1,2-pin JST-PH connector (battery),B2B-PH-K-S,JST,2-pin PH (2.0mm pitch),0.12,Connects to 18650 cell holder
+J3,1,1x4 pin header (TP4056 module),TSW-104-07-T-S,Samtec,1x4 2.54mm header,0.09,TP4056 documented as an off-board module per SPEC.md
+H1,1,Mounting hole M2 (NPTH),N/A,N/A,2.5mm NPTH,0.00,Mechanical only, no copper
+H2,1,Mounting hole M2 (NPTH),N/A,N/A,2.5mm NPTH,0.00,Mechanical only, no copper

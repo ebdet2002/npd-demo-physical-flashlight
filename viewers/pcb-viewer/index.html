@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flashlight PCB Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body { margin: 0; background: #0B0C0E; color: #F4F1EC;
+      font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    header {
+      padding: 16px 20px; border-bottom: 1px solid #1C1F26;
+      display: flex; align-items: baseline; gap: 16px;
+    }
+    header h1 { font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+      font-size: 22px; margin: 0; color: #FF6B00; letter-spacing: 0.5px; }
+    header .caveat { font-size: 12px; color: #4FD1FF; }
+    #status { padding: 10px 20px; font-size: 13px; opacity: 0.75; }
+    #boards {
+      display: flex; flex-wrap: wrap; gap: 24px; padding: 20px;
+    }
+    .board-card {
+      background: #1C1F26; border: 1px solid #2a2e38; border-radius: 10px;
+      padding: 16px; flex: 1 1 420px;
+    }
+    .board-card h2 { font-size: 14px; margin: 0 0 10px 0; color: #F4F1EC;
+      text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.8; }
+    .board-card .svg-holder {
+      background: #0B0C0E; border-radius: 6px; padding: 8px;
+      display: flex; justify-content: center;
+    }
+    .board-card svg { width: 100%; height: auto; max-height: 420px; }
+    footer { padding: 16px 20px; font-size: 12px; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flashlight Driver Board — PCB / Gerber Viewer</h1>
+    <span class="caveat">Structurally valid Gerbers — not DRC-checked. See pcb/README.md.</span>
+  </header>
+  <div id="status">Loading Gerber layers…</div>
+  <div id="boards"></div>
+  <footer>
+    Rendered client-side from the real files in <code>pcb/gerbers/</code> using
+    <a href="https://github.com/tracespace/tracespace" style="color:#4FD1FF">pcb-stackup</a>
+    (bundled locally, no network access needed at view time).
+  </footer>
+
+  <script src="./vendor/pcb-stackup.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

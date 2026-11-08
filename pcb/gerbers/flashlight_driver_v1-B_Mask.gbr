@@ -1,0 +1,15 @@
+G04 Created with the python gerber_writer 0.4.3.3*
+G04 #@! TF.CreationDate,2026-11-08T18:42:40.022417*
+G04 #@! TF.FileFunction,Soldermask,Bot*
+G04 #@! TF.FilePolarity,Negative*
+%MOMM*%
+%FSLAX36Y36*%
+G75*
+G04 #@! TA.AperFunction,Soldermask,Bot*
+G04 #@! TAShape,Rectangle,46.0,26.0,0*
+%ADD10R,46.0X26.0*%
+G04 #@! TD*
+%LPD*%
+D10*
+X25000000Y15000000D03*
+M02*

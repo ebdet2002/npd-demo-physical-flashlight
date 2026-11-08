@@ -1,0 +1,9 @@
+{
+  "name": "pcb-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Gerber viewer/build step for the flashlight driver board, using pcb-stackup",
+  "dependencies": {
+    "pcb-stackup": "^4.2.8"
+  }
+}

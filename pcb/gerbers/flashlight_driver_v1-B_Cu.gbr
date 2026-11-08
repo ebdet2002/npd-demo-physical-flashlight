@@ -1,0 +1,19 @@
+G04 Created with the python gerber_writer 0.4.3.3*
+G04 #@! TF.CreationDate,2026-11-08T18:42:40.021845*
+G04 #@! TF.FileFunction,Copper,L2,Bot*
+G04 #@! TF.FilePolarity,Positive*
+%MOMM*%
+%FSLAX36Y36*%
+G75*
+%LPD*%
+G04 #@! TA.AperFunction,Copper,L2,Bot*
+G36*
+X2000000Y2000000D02*
+G01*
+X48000000Y2000000D01*
+X48000000Y28000000D01*
+X2000000Y28000000D01*
+X2000000Y2000000D01*
+G37*
+G04 #@! TD*
+M02*
